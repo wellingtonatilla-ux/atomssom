@@ -1,6 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="stylesheet" href="C:\Users\welli\OneDrive\Área de Trabalho\siteatoms\css\.cookie-banner.css">
+  
+  <!-- Google Consent Mode V2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_ID_GOOGLE_ADS"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+});
+
+gtag('js', new Date());
+gtag('config', 'AW-SEU_ID_GOOGLE_ADS');
+</script>
+
+<script>
+
+if(localStorage.getItem("cookieConsent")){
+    document.getElementById("cookieBanner").style.display="none";
+}
+
+function acceptCookies(){
+
+gtag('consent','update',{
+
+'ad_storage':'granted',
+'analytics_storage':'granted',
+'ad_user_data':'granted',
+'ad_personalization':'granted'
+
+});
+
+localStorage.setItem("cookieConsent","accepted");
+
+document.getElementById("cookieBanner").style.display="none";
+
+}
+
+function rejectCookies(){
+
+gtag('consent','update',{
+
+'ad_storage':'denied',
+'analytics_storage':'denied',
+'ad_user_data':'denied',
+'ad_personalization':'denied'
+
+});
+
+localStorage.setItem("cookieConsent","rejected");
+
+document.getElementById("cookieBanner").style.display="none";
+
+}
+
+function openPreferences(){
+
+alert("Aqui você pode abrir uma janela de preferências de cookies.");
+
+}
+
+</script>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18295100513"></script>
@@ -172,6 +242,37 @@ footer{
 </head>
 
 <body>
+
+  <div id="cookieBanner" class="cookie-banner">
+
+    <div class="cookie-content">
+
+        <h3>🍪 Sua Privacidade é Importante</h3>
+
+        <p>
+            Utilizamos cookies para melhorar sua experiência,
+            medir o desempenho do site e oferecer anúncios personalizados.
+        </p>
+
+        <div class="cookie-buttons">
+
+            <button onclick="acceptCookies()" class="btnAccept">
+                Aceitar
+            </button>
+
+            <button onclick="rejectCookies()" class="btnReject">
+                Recusar
+            </button>
+
+            <button onclick="openPreferences()" class="btnConfig">
+                Personalizar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <header>
   <div class="logo">
