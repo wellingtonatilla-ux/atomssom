@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <link rel="stylesheet" href="C:\Users\welli\OneDrive\Área de Trabalho\siteatoms\css\.cookie-banner.css">
-  
+
   <!-- Google Consent Mode V2 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_ID_GOOGLE_ADS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18295100513"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,9 @@ gtag('consent', 'default', {
 });
 
 gtag('js', new Date());
-gtag('config', 'AW-SEU_ID_GOOGLE_ADS');
+gtag('config', 'AW-18295100513');
+
+
 </script>
 
 <script>
@@ -744,6 +746,32 @@ Fico à disposição para qualquer dúvida!
   window.open(url,"_blank");
 }
 
+</script>
+
+<script>
+const grantButton = document.getElementById("grantButton");
+
+grantButton.addEventListener("click", function () {
+
+    localStorage.setItem("consentGranted", "true");
+
+    gtag('consent', 'update', {
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        ad_storage: 'granted',
+        analytics_storage: 'granted'
+    });
+
+    document.getElementById("cookieBanner").style.display = "none";
+
+});
+
+// Carrega a tag do Google
+var gtagScript = document.createElement('script');
+gtagScript.async = true;
+gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18295100513'; // coloque seu ID
+
+document.head.appendChild(gtagScript);
 </script>
 
 <div style="text-align:center; font-family:Arial, sans-serif;">
